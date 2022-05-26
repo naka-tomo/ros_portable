@@ -9,7 +9,7 @@ pip install rospkg
 pip install catkin_pkg
 
 cd
-git cline https://github.com/naka-tomo/roslib.git
+git clone https://github.com/naka-tomo/roslib.git
 ```
 
 - cloneしたフォルダへパスを通す
