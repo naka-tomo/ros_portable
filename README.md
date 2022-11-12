@@ -19,7 +19,7 @@ git clone https://github.com/naka-tomo/roslib.git
   ```
   - Windowsの場合
   ```
-  set PYTHONPATH=%set PYTHONPATH%;C:¥***¥roslib
+  set PYTHONPATH=%PYTHONPATH%;C:¥***¥roslib
   ```
 
 - IPの設定
