@@ -2,16 +2,13 @@
 
 Python環境（Ubuntu, Mac, Windows）で，ROSで通信するための最低限のファイル
 
-# インストール
-- 依存モジュールのインストールと，リポジトリのclone
-```
-pip install rospkg
-pip install catkin_pkg
+## インストール
+- リポジトリのclone
+  ```
+  git clone https://github.com/naka-tomo/roslib.git
+  ```
 
-cd
-git clone https://github.com/naka-tomo/roslib.git
-```
-
+## 設定方法
 - cloneしたフォルダへパスを通す
   - Macの場合
   ```
@@ -20,6 +17,13 @@ git clone https://github.com/naka-tomo/roslib.git
   - Windowsの場合
   ```
   set PYTHONPATH=%PYTHONPATH%;C:¥***¥roslib
+  ```
+  - またはスクリプトの上部でroslibへのパスを通す（Mac, Windows共通）
+  ```
+  import sys
+
+  # roslibへのパスを通す
+  sys.path.append("../roslib")
   ```
 
 - IPの設定
@@ -34,9 +38,18 @@ git clone https://github.com/naka-tomo/roslib.git
     set ROS_MASTER_URI=http://192.168.1.10:11311
     set ROS_HOSTNAME=192.168.1.11
     ```
-- またはPythonファイルのはじめに宣言  
+  - またはPythonファイルのはじめに宣言（Mac, Windows共通）
+    ```
+    import os
+    os.environ["ROS_MASTER_URI"] = "http://192.168.1.10:11311"
+    os.environ["ROS_IP"] = "192.168.1.11"
+    ```
+
+## 使い方
+- ROS master (roscore)の起動
   ```
-  import os
-  os.environ["ROS_MASTER_URI"] = "http://192.168.1.10:11311"
-  os.environ["ROS_IP"] = "192.168.1.11"
+  cd roslib
+  python python run_master.py
   ```
+  
+- message, service, action, rosparamが使用可能．使い方の詳細は[example](example)を参照．
