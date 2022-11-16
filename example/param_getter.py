@@ -11,12 +11,11 @@ os.environ["ROS_IP"] = "127.0.0.1"
 sys.path.append("../")
 import rospy
 
-param = 10
 def main():
-    global param
+    param = 10
+
     rospy.init_node("param_getter")
     rospy.set_param( "/param_tutrial/param", param )
-    
     r = rospy.Rate(1)
     while not rospy.is_shutdown():
         param = rospy.get_param( "/param_tutrial/param" )
