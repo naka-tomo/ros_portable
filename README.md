@@ -21,8 +21,6 @@ Python環境（Ubuntu, Mac, Windows）で，ROSで通信するための最低限
   - またはスクリプトの上部でroslibへのパスを通す（Mac, Windows共通）
   ```
   import sys
-
-  # roslibへのパスを通す
   sys.path.append("../roslib")
   ```
 
