@@ -44,6 +44,7 @@ Python環境（Ubuntu, Mac, Windows）で，ROSで通信するための最低限
     ```
 
 ## 使い方
+### 通信機能
 - ROS master (roscore)の起動
   ```
   cd roslib
@@ -51,3 +52,15 @@ Python環境（Ubuntu, Mac, Windows）で，ROSで通信するための最低限
   ```
   
 - message, service, action, rosparamが使用可能．使い方の詳細は[example](example)を参照．
+
+### コマンド
+- rosnode, rosparam, rosservice, rostopicの一部機能は，setupスクリプトを実行することでWindows, Macでも動作可能
+  - Macの場合
+    ```
+    source (リポジトリのあるディレクトリ)/roslib/ros_command/setup.sh
+    ```
+  - Windowsの場合
+    ```
+    (リポジトリのあるディレクトリ)/roslib/ros_command/setup.bat
+    ```
+- Ros masterのIPは`(リポジトリのあるディレクトリ)/roslib/ros_command/set_ip.py`で指定する
