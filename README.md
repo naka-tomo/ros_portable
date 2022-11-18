@@ -63,4 +63,14 @@ Python環境（Ubuntu, Mac, Windows）で，ROSで通信するための最低限
     ```
     (リポジトリのあるディレクトリ)/roslib/ros_command/setup.bat
     ```
-- Ros masterのIPは`(リポジトリのあるディレクトリ)/roslib/ros_command/set_ip.py`で指定する
+- IPの設定
+  - Ros masterのIPは`(リポジトリのあるディレクトリ)/roslib/ros_command/set_ip.py`で指定する
+    ```
+    os.environ["ROS_MASTER_URI"] = "http://(ros masterのIP):11311"
+    os.environ["ROS_IP"] = "(このPCのIP)"
+    ```
+  - 環境変数の値を参照する場合は，設定をコメントアウトする．
+    ```
+    # os.environ["ROS_MASTER_URI"] = "http://127.0.0.1:11311"
+    # os.environ["ROS_IP"] = "127.0.0.1"
+    ```
