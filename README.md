@@ -7,6 +7,12 @@ Python環境（Ubuntu, Mac, Windows）で，ROSで通信するための最低限
   ```
   git clone https://github.com/naka-tomo/roslib.git
   ```
+- 依存モジュールのインストール
+  ```
+  pip install defusedxml
+  pip install pyyaml
+  pip install pyparsing
+  ```
 
 ## 設定方法
 - cloneしたフォルダへパスを通す
