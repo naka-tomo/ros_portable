@@ -1,0 +1,3 @@
+import rosnode
+
+rosnode.rosnodemain()
