@@ -5,7 +5,7 @@ Mac, Windowsでの，ROSの最小限の実行環境
 ## インストール
 - リポジトリのclone
   ```
-  git clone https://github.com/naka-tomo/roslib.git
+  git clone https://github.com/naka-tomo/ros_portable.git
   ```
 - 依存モジュールのインストール
   ```
@@ -19,11 +19,11 @@ Mac, Windowsでの，ROSの最小限の実行環境
   `setup.sh`または`setup.bat`の`ROS_MASTER_URI`と`ROS_HOSTNAME`を書き換える
 
 - 設定の反映
-  - Macの場合
+  - Macの場合: ターミナルで以下を実行
   ```
   source (cloneしたパス)/setup.sh
   ```
-  - Windowsの場合
+  - Windowsの場合: コマンドプロンプトで以下を実行
   ```
   (cloneしたパス)/setup.bat
   ```
