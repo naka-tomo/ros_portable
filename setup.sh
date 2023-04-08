@@ -1,4 +1,4 @@
-DIR=`dirname "$0"`
+DIR=`dirname "${BASH_SOURCE:-$0}"`
 export PYTHONPATH="$DIR/commands:$DIR/python_package:$PYTHONPATH"
 export PATH=$DIR/commands:$PATH
 
